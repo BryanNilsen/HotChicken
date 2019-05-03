@@ -1,5 +1,7 @@
 console.log("Hot Chicken");
+
 const outputDiv = document.getElementById("output");
+
 const addChickenBtn = document.getElementById("addChickenBtn");
 const saveChickenBtn = document.getElementById("saveChickenBtn");
 const saveEditedChickenBtn = document.getElementById("saveEditedChickenBtn");
@@ -20,6 +22,12 @@ saveChickenBtn.addEventListener("click", () => {
   saveNewChickenObject();
 });
 
+function clearSaveChickenForm() {
+  document.getElementById("chickenName").value = "";
+  document.getElementById("chickenGender").value = "";
+  document.getElementById("chickenColor").value = "";
+  document.getElementById("chickenSpice").value = "";
+}
 function saveNewChickenObject() {
   const newChickenObject = {
     name: document.getElementById("chickenName").value,
@@ -27,8 +35,11 @@ function saveNewChickenObject() {
     color: document.getElementById("chickenColor").value,
     spice_level: document.getElementById("chickenSpice").value
   };
+
   API.saveChicken(newChickenObject).then(loadChickenData);
+
   addChickenFormDiv.classList.add("hidden");
+  clearSaveChickenForm();
 }
 
 function loadChickenData() {
@@ -50,7 +61,8 @@ function buildChickenDOM(chicken) {
   let chickenCard = document.createElement("section");
   setAttributes(chickenCard, {
     id: `chick_section_${chicken.id}`,
-    class: "chicken_card"
+    class: "chicken_card",
+    style: `border: 8px solid ${chicken.color}`
   });
 
   // build header element
@@ -65,7 +77,6 @@ function buildChickenDOM(chicken) {
         <li>Color: ${chicken.color}</li>
         <li>Spice-Level: ${chicken.spice_level}</li>
       </ul>
-
       `;
 
   // create edit & delete buttons
@@ -75,16 +86,16 @@ function buildChickenDOM(chicken) {
     if (editChickenFormDiv.className === "hidden") {
       editChickenFormDiv.classList.remove("hidden");
       addChickenFormDiv.classList.add("hidden");
-    } else {
-      editChickenFormDiv.classList.add("hidden");
     }
     editChicken(event.target.name.slice(6));
+    editChicken(chicken.id);
   });
 
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete Chicken";
   deleteBtn.addEventListener("click", () => {
     API.deleteChicken(chicken.id).then(loadChickenData);
+    addChickenFormDiv.classList.add("hidden");
   });
 
   let jumpToEditAnchor = document.createElement("a");
