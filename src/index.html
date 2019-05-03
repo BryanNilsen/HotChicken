@@ -11,9 +11,9 @@
     <nav>
       <h1>HOT CHICKEN</h1>
       <!-- button to show / hide add chicken form -->
-      <button id="addChickenBtn" class="addChickenBtn">Add Chicken</button>
     </nav>
 
+    <button id="addChickenBtn" class="addChickenBtn">Add Chicken</button>
     <div class="wrapper">
       <!-- add chicken form (initially hidden) -->
       <div id="addChickenForm" class="hidden">
@@ -51,6 +51,7 @@
         <hr />
       </div>
 
+      <!-- edit chicken form -->
       <div id="editChickenForm" class="hidden">
         <h1 id="edit">EDIT CHICKEN</h1>
         <fieldset class="editChickForm">
@@ -86,12 +87,15 @@
         </fieldset>
         <hr />
       </div>
+
       <h1>Cluck-it List</h1>
+
       <!-- chicken list output -->
       <div id="output" class="output"></div>
       <!-- end of chicken list output -->
     </div>
     <!-- end of page wrapper -->
+
     <script src="api.js"></script>
     <script src="hotchicken.js"></script>
   </body>

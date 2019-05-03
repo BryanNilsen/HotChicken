@@ -1,9 +1,9 @@
 {
   "chicken": [
     {
-      "name": "Feather Flocklear",
+      "name": "Feather Talons",
       "gender": "female",
-      "color": "yellow",
+      "color": "teal",
       "spice_level": "5",
       "id": 1
     },
@@ -15,23 +15,16 @@
       "id": 2
     },
     {
-      "id": 3,
-      "name": "Plucky Brewster",
-      "gender": "female",
-      "color": "white",
-      "spice_level": 3
-    },
-    {
       "name": "Joe Thighsman",
       "gender": "male",
-      "color": "speckled",
+      "color": "DimGray",
       "spice_level": "6",
       "id": 4
     },
     {
       "name": "Yolko Ono",
       "gender": "female",
-      "color": "white",
+      "color": "indigo",
       "spice_level": "4",
       "id": 5
     },
@@ -45,7 +38,7 @@
     {
       "name": "Hen Solo",
       "gender": "male",
-      "color": "blue tan",
+      "color": "darkgoldenrod",
       "spice_level": "2",
       "id": 7
     },
