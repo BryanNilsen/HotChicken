@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: lightgoldenrodyellow
+}
+
+.chickForm {
+  background: white;
+  border: 2px solid green;
+  line-height: 2em;
+  margin: 10px;
+  padding: 10px;
+  width: 40%
+}
+
+input {
+  font-size: 1em;
+}
+
+.editChickForm {
+  background: white;
+  border: 2px solid rgb(0, 60, 128);
+  line-height: 2em;
+  margin: 10px;
+  padding: 10px;
+  width: 40%
+}
+
+.chicken_card {
+  background: white;
+  /* width: 20%; */
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid gray;
+}
+
+.chicken_card li {
+  list-style-type: none;
+  list-style-image: url('/img/eggicon.svg');
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none
+}
+
+.output {
+  display: inline-flex;
+  flex-wrap: wrap
+}

@@ -1,0 +1,53 @@
+{
+  "chicken": [
+    {
+      "name": "Feather Flocklear",
+      "gender": "female",
+      "color": "yellow",
+      "spice_level": "5",
+      "id": 1
+    },
+    {
+      "name": "Cocky Balboa",
+      "gender": "male",
+      "color": "brown",
+      "spice_level": "4",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Plucky Brewster",
+      "gender": "female",
+      "color": "white",
+      "spice_level": 3
+    },
+    {
+      "name": "Joe Thighsman",
+      "gender": "male",
+      "color": "speckled",
+      "spice_level": "6",
+      "id": 4
+    },
+    {
+      "name": "Yolko Ono",
+      "gender": "female",
+      "color": "white",
+      "spice_level": "4",
+      "id": 5
+    },
+    {
+      "name": "Arnold Schwarzenegglayer",
+      "gender": "male",
+      "color": "tan",
+      "spice_level": "8",
+      "id": 6
+    },
+    {
+      "name": "Hen Solo",
+      "gender": "male",
+      "color": "blue tan",
+      "spice_level": "2",
+      "id": 7
+    }
+  ]
+}
