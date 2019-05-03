@@ -48,6 +48,13 @@
       "color": "blue tan",
       "spice_level": "2",
       "id": 7
+    },
+    {
+      "name": "Debra Winger",
+      "gender": "female",
+      "color": "brown",
+      "spice_level": "5",
+      "id": 8
     }
   ]
 }

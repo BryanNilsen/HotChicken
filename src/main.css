@@ -1,6 +1,24 @@
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: lightgoldenrodyellow
+}
+
+.wrapper {
+  padding: 10px
+}
+
+nav {
+  padding: 20px;
+  color: white;
+  background: rgb(196, 7, 7)
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 3em;
+  font-style: oblique;
+  text-shadow: 0px 5px 10px rgba(238, 255, 0, 0.795)
 }
 
 .chickForm {
@@ -44,6 +62,19 @@ input {
 }
 
 .output {
+  padding: 10px;
   display: inline-flex;
   flex-wrap: wrap
+}
+
+.addChickenBtn {
+  font-size: 1em;
+  margin: 10px;
+  border: 2px solid yellow;
+  color: white;
+  background: rgb(196, 7, 7)
+}
+
+.addChickenBtn:hover {
+  background: black;
 }

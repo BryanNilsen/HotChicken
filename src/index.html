@@ -8,85 +8,90 @@
     <title>Hot Chicken</title>
   </head>
   <body>
-    <h1>Hot Chicken</h1>
+    <nav>
+      <h1>HOT CHICKEN</h1>
+      <!-- button to show / hide add chicken form -->
+      <button id="addChickenBtn" class="addChickenBtn">Add Chicken</button>
+    </nav>
 
-    <!-- show / hide add chicken form -->
-    <button id="addChickenBtn">Add Chicken</button>
+    <div class="wrapper">
+      <!-- add chicken form (initially hidden) -->
+      <div id="addChickenForm" class="hidden">
+        <h1>ADD NEW CHICKEN</h1>
+        <fieldset class="chickForm">
+          <label for="chickenName">Name</label>
+          <input type="text" name="chickenName" id="chickenName" />
+          <br />
+          <label for="chickenGender">Gender</label>
+          <select name="chickenGender" id="chickenGender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+          </select>
+          <br />
+          <label for="chickenColor">Color</label>
+          <input type="text" name="chickenColor" id="chickenColor" />
+          <br />
+          <label for="chickenSpice">Spice Level</label>
+          <select name="chickenSpice" id="chickenSpice">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <br />
+          <button id="saveChickenBtn">Save Chicken</button>
+        </fieldset>
+        <hr />
+      </div>
 
-    <!-- add chicken form (initially hidden) -->
-    <div id="addChickenForm" class="hidden">
-      <h1>ADD NEW CHICKEN</h1>
-      <fieldset class="chickForm">
-        <label for="chickenName">Name</label>
-        <input type="text" name="chickenName" id="chickenName" />
-        <br />
-        <label for="chickenGender">Gender</label>
-        <select name="chickenGender" id="chickenGender">
-          <option value="male">male</option>
-          <option value="female">female</option>
-        </select>
-        <br />
-        <label for="chickenColor">Color</label>
-        <input type="text" name="chickenColor" id="chickenColor" />
-        <br />
-        <label for="chickenSpice">Spice Level</label>
-        <select name="chickenSpice" id="chickenSpice">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-        <br />
-        <button id="saveChickenBtn">Save Chicken</button>
-      </fieldset>
-      <hr />
+      <div id="editChickenForm" class="hidden">
+        <h1 id="edit">EDIT CHICKEN</h1>
+        <fieldset class="editChickForm">
+          <input type="hidden" id="editChickenId" />
+          <label for="editChickenName">Name</label>
+          <input type="text" name="editChickenName" id="editChickenName" />
+          <br />
+          <label for="editChickenGender">Gender</label>
+          <select name="editChickenGender" id="editChickenGender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+          </select>
+          <br />
+          <label for="editChickenColor">Color</label>
+          <input type="text" name="editChickenColor" id="editChickenColor" />
+          <br />
+          <label for="editChickenSpice">Spice Level</label>
+          <select name="editChickenSpice" id="editChickenSpice">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <br />
+          <button id="saveEditedChickenBtn">Save Chicken Edits</button>
+        </fieldset>
+        <hr />
+      </div>
+      <h1>Cluck-it List</h1>
+      <!-- chicken list output -->
+      <div id="output" class="output"></div>
+      <!-- end of chicken list output -->
     </div>
-
-    <div id="editChickenForm" class="hidden">
-      <h1 id="edit">EDIT CHICKEN</h1>
-      <fieldset class="editChickForm">
-        <input type="hidden" id="editChickenId" />
-        <label for="editChickenName">Name</label>
-        <input type="text" name="editChickenName" id="editChickenName" />
-        <br />
-        <label for="editChickenGender">Gender</label>
-        <select name="editChickenGender" id="editChickenGender">
-          <option value="male">male</option>
-          <option value="female">female</option>
-        </select>
-        <br />
-        <label for="editChickenColor">Color</label>
-        <input type="text" name="editChickenColor" id="editChickenColor" />
-        <br />
-        <label for="editChickenSpice">Spice Level</label>
-        <select name="editChickenSpice" id="editChickenSpice">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-        <br />
-        <button id="saveEditedChickenBtn">Save Chicken Edits</button>
-      </fieldset>
-      <hr />
-    </div>
-
-    <!-- chicken list output -->
-    <div id="output" class="output"></div>
+    <!-- end of page wrapper -->
     <script src="api.js"></script>
     <script src="hotchicken.js"></script>
   </body>

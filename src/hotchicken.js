@@ -20,6 +20,12 @@ saveChickenBtn.addEventListener("click", () => {
   saveNewChickenObject();
 });
 
+function clearSaveChickenForm() {
+  document.getElementById("chickenName").value = "";
+  document.getElementById("chickenGender").value = "";
+  document.getElementById("chickenColor").value = "";
+  document.getElementById("chickenSpice").value = "";
+}
 function saveNewChickenObject() {
   const newChickenObject = {
     name: document.getElementById("chickenName").value,
@@ -29,6 +35,7 @@ function saveNewChickenObject() {
   };
   API.saveChicken(newChickenObject).then(loadChickenData);
   addChickenFormDiv.classList.add("hidden");
+  clearSaveChickenForm();
 }
 
 function loadChickenData() {
@@ -75,8 +82,6 @@ function buildChickenDOM(chicken) {
     if (editChickenFormDiv.className === "hidden") {
       editChickenFormDiv.classList.remove("hidden");
       addChickenFormDiv.classList.add("hidden");
-    } else {
-      editChickenFormDiv.classList.add("hidden");
     }
     editChicken(event.target.name.slice(6));
   });
@@ -85,6 +90,7 @@ function buildChickenDOM(chicken) {
   deleteBtn.textContent = "Delete Chicken";
   deleteBtn.addEventListener("click", () => {
     API.deleteChicken(chicken.id).then(loadChickenData);
+    addChickenFormDiv.classList.add("hidden");
   });
 
   let jumpToEditAnchor = document.createElement("a");
