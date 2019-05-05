@@ -87,7 +87,7 @@ function buildChickenDOM(chicken) {
       editChickenFormDiv.classList.remove("hidden");
       addChickenFormDiv.classList.add("hidden");
     }
-    editChicken(event.target.name.slice(6));
+    // editChicken(event.target.name.slice(6));
     editChicken(chicken.id);
   });
 
