@@ -1,7 +1,7 @@
 {
   "chicken": [
     {
-      "name": "Feather Talons",
+      "name": "Feather Flocklear",
       "gender": "female",
       "color": "teal",
       "spice_level": "5",
@@ -48,6 +48,13 @@
       "color": "brown",
       "spice_level": "5",
       "id": 8
+    },
+    {
+      "name": "Birdley Cooper",
+      "gender": "male",
+      "color": "brown",
+      "spice_level": "3",
+      "id": 9
     }
   ]
 }
